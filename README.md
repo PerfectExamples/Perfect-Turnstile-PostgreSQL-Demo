@@ -1,4 +1,4 @@
-# Perfect Turnstile with SQLite
+# Perfect Turnstile with PostgreSQL
 
 <p align="center">
     <a href="http://perfect.org/get-involved.html" target="_blank">
@@ -40,9 +40,9 @@
 </p>
 
 
-This example demonstrates the integration Stormpath's Turnstile authentication system with Perfect and a SQLite ORM.
+This example demonstrates the integration Stormpath's Turnstile authentication system with Perfect and a PostgreSQL ORM.
 
-The library can be found at [https://github.com/PerfectlySoft/Perfect-Turnstile-SQLite](https://github.com/PerfectlySoft/Perfect-Turnstile-SQLite)
+The library can be found at [https://github.com/PerfectlySoft/Perfect-Turnstile-PostgreSQL](https://github.com/PerfectlySoft/Perfect-Turnstile-PostgreSQL)
 
 This package builds with Swift Package Manager and is part of the [Perfect](https://github.com/PerfectlySoft/Perfect) project.
 
@@ -57,7 +57,7 @@ Ensure you have installed Xcode 8.0 or later.
 swift package generate-xcodeproj
 ```
 
-* Open `PerfectTurnstileSQLiteDemo.xcodeproj`
+* Open `PerfectTurnstilePostgreSQLDemo.xcodeproj`
 
 To run this project from Xcode, edit the Scheme, Under "Options" for "run", check "Use custom working directory" and choose the project's working directory. After doing this, the project can be run from within Xcode.
 
@@ -66,7 +66,7 @@ To run this project from Xcode, edit the Scheme, Under "Options" for "run", chec
 * Check out or download the project;
 * In terminal, navigate to the directory 
 * Execute `swift build`
-* Once the project has compiled, execute `./.build/debug/PerfectTurnstileSQLiteDemo`
+* Once the project has compiled, execute `./.build/debug/PerfectTurnstilePostgreSQLDemo`
 
 ```
 [INFO] Starting HTTP server on 0.0.0.0:8181 with document root ./webroot
