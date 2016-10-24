@@ -48,6 +48,49 @@ This package builds with Swift Package Manager and is part of the [Perfect](http
 
 Ensure you have installed Xcode 8.0 or later.
 
+## Build Notes
+
+### macOS
+
+If you receive a compile error that says the following, you need to install and link libxml2
+
+```
+note: you may be able to install libxml-2.0 using your system-packager:
+
+    brew install libxml2
+
+Compile Swift Module 'PerfectXML' (2 sources)
+<module-includes>:1:9: note: in file included from <module-includes>:1:
+#import "libxml2.h"
+```
+
+To install and link libxml2 with homebrew, use the following two commands
+
+```
+brew install libxml2
+brew link --force libxml2
+```
+
+To install Postgres:
+
+```
+brew install postgres
+```
+
+### Linux
+
+Ensure that you have installed libxml2-dev and pkg-config.
+
+``` 
+sudo apt-get install libxml2-dev pkg-config
+```
+
+To install libpq-dev
+
+```
+sudo apt-get install libpq-dev
+```
+
 ## Setup - Xcode 8
 
 * Check out or download the project;
