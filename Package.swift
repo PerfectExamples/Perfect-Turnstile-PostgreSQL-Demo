@@ -24,6 +24,6 @@ let package = Package(
 	targets: [],
 	dependencies: [
 		.Package(url: "https://github.com/PerfectlySoft/Perfect-Turnstile-PostgreSQL.git", majorVersion: 0, minor: 0),
-		.Package(url: "https://github.com/dabfleming/Perfect-RequestLogger.git", majorVersion: 0, minor: 1)
+		.Package(url: "https://github.com/PerfectlySoft/Perfect-RequestLogger.git", majorVersion: 0, minor: 5),
 	]
 )

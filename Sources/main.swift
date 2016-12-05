@@ -32,26 +32,21 @@ import PerfectRequestLogger
 // Used later in script for the Realm and how the user authenticates.
 let pturnstile = TurnstilePerfectRealm()
 
-/*
-insert into "public"."users" ( "facebookID", "password", "uniqueID", "lastname", "firstname", "googleID", "username", "email") values ( 'kjhkjh', 'kjhkjh', 'kjhkjh', 'kjhkj', 'kjhkjh', 'kjhkjh', 'jkjhkj', 'kjhkjh') RETURNING *
-*/
 
-// Set the connection vatiable
-connect = PostgresConnect(
-	host: "localhost",
-	username: "perfect",
-	password: "perfect",
-	database: "perfect_testing",
-	port: 32769
-)
+PostgresConnector.host        = "localhost"
+PostgresConnector.username    = "perfect"
+PostgresConnector.password    = "perfect"
+PostgresConnector.database    = "perfect_testing"
+PostgresConnector.port        = 5432
+
 
 // Set up the Authentication table
-let auth = AuthAccount(connect!)
-auth.setup()
+let auth = AuthAccount()
+try? auth.setup()
 
 // Connect the AccessTokenStore
-tokenStore = AccessTokenStore(connect!)
-tokenStore?.setup()
+tokenStore = AccessTokenStore()
+try? tokenStore?.setup()
 
 //let facebook = Facebook(clientID: "CLIENT_ID", clientSecret: "CLIENT_SECRET")
 //let google = Google(clientID: "CLIENT_ID", clientSecret: "CLIENT_SECRET")
@@ -132,8 +127,8 @@ server.setResponseFilters([pturnstile.responseFilter])
 
 server.setRequestFilters([(authFilter, .high)])
 
-server.setRequestFilters([(myLogger.requestFilter(), .high)])
-server.setResponseFilters([(myLogger.responseFilter(), .low)])
+server.setRequestFilters([(myLogger, .high)])
+server.setResponseFilters([(myLogger, .low)])
 
 // Set a listen port of 8181
 server.serverPort = 8181
