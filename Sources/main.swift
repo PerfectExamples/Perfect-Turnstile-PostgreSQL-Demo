@@ -25,6 +25,7 @@ import StORM
 import PostgresStORM
 import PerfectTurnstilePostgreSQL
 import PerfectRequestLogger
+import TurnstilePerfect
 
 
 //StORMdebug = true
