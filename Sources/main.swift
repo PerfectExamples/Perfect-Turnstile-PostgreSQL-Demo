@@ -29,6 +29,7 @@ import TurnstilePerfect
 
 
 //StORMdebug = true
+RequestLogFile.location = "./requests.log"
 
 // Used later in script for the Realm and how the user authenticates.
 let pturnstile = TurnstilePerfectRealm()
