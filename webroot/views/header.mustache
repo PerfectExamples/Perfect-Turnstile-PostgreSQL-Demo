@@ -13,7 +13,7 @@
           <li role="presentation"><a href="/login">Log In</a></li>
           {{/authenticated}}
           {{#authenticated}}
-          <li role="presentation"><a href="javascript:;" onclick="var f=document.createElement('form');f.method='POST';f.action='/logout';f.submit();">Logout</a></li>
+          <li role="presentation"><a href="javascript:;" onclick="var f=document.createElement('form');document.body.appendChild(f);f.method='POST';f.action='/logout';f.submit();">Logout</a></li>
           {{/authenticated}}
         </ul>
       </nav>
