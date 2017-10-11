@@ -68,3 +68,7 @@ buildlinux
 /.packages_lin
 /.build_lin
 Package.swift.orig
+Package.resolved
+PADockerfile_build
+requests.log
+StORMlog.txt

@@ -78,7 +78,7 @@ routes.add(method: .get, uri: "/api/v1/check", handler: {
 
 	var resp = [String: String]()
 	resp["authenticated"] = "AUTHED: \(request.user.authenticated)"
-	resp["authDetails"] = "DETAILS: \(request.user.authDetails)"
+	resp["SessionID"] = "SessionID: \(request.user.authDetails?.account.uniqueID)"
 
 	do {
 		try response.setBody(json: resp)
